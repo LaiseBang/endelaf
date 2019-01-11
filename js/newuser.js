@@ -80,7 +80,7 @@ function getCityByZip() {
                 if (Number(userInputNr) === objects.Postnr) {
                     zipCode.className = "true";
                     // display city on screen
-                    city.innerHTML = zipCodeArray[i].Bynavn;
+                    city.textContent = zipCodeArray[i].Bynavn;
                     console.log(city.textContent);
 
 
