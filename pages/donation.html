@@ -57,7 +57,7 @@
                                 <div id="kategori-img-dog"></div>
                                 <div class="left-block">
                                     <p class="checkbox-p">
-                                        <label><input id="dogFood" min="75" type="checkbox" name="dog" onChange="checkbox(this.value),getTotals()"
+                                        <label><input id="dogFood" type="checkbox" name="dog" onChange="checkbox(this.value),getTotals()"
                                                 value="Hundemad">
                                             Hundemad 75,- </label>
                                     </p>
@@ -76,11 +76,15 @@
                                 <div class="left-block">
                                     <p class="infobox">
                                         <div id="infoBob" class="i-img">
-                                            <span class="infotext">Du er med til at give mad til<br>
-                                                mange hjemløse hunde.</span>
+                                            <span class="infotext">Dækker f.eks. 2 dåser hundemad og et tyggeben</span>
                                         </div>
-                                        <div class="i-img"></div>
-                                        <div class="i-img"></div>
+                                        <div id="infoBob" class="i-img">
+                                            <span class="infotext">Dækker f.eks. 1 hundefrakke til vinter eller 2
+                                                hundetrøjer til forår</span>
+                                        </div>
+                                        <div id="infoBob" class="i-img">
+                                            <span class="infotext">Dækker f.eks. 1 legetov og 1 bidedyr</span>
+                                        </div>
                                     </p>
 
                                 </div>
@@ -109,11 +113,14 @@
                                 </div>
                                 <div class="left-block">
                                     <p class="infobox">
-                                        <div class="i-img"></div>
+                                        <div id="infoBob" class="i-img"> <span class="infotext">Dækker ca. halvdelen af
+                                                omkostningerne til en vinterfrakke</span></div>
 
-                                        <div class="i-img"></div>
+                                        <div id="infoBob" class="i-img"> <span class="infotext">Dækker f.eks. 1 hue og
+                                                1 par vanter</span></div>
 
-                                        <div class="i-img"></div>
+                                        <div id="infoBob" class="i-img"> <span class="infotext">Dækker f.eks. 3 par
+                                                uldne sokker</span></div>
                                     </p>
                                 </div>
                             </div>
@@ -141,11 +148,14 @@
                                 </div>
                                 <div class="left-block">
                                     <p class="infobox">
-                                        <div class="i-img"></div>
+                                        <div id="infoBob" class="i-img"> <span class="infotext">Dækker 1
+                                                bambustandbørste og 1 tube tandpasta</span></div>
 
-                                        <div class="i-img"></div>
+                                        <div id="infoBob" class="i-img"> <span class="infotext">Dækker pakke med 30
+                                                tamponer og 14 bind</span></div>
 
-                                        <div class="i-img"></div>
+                                        <div id="infoBob" class="i-img"> <span class="infotext">Dækker 1 pakke
+                                                engangsskrabere og 1 barberskum</span></div>
                                     </p>
                                 </div>
                             </div>
@@ -159,8 +169,8 @@
                                     onclick="show1();" required>
                                 <label for="visa-dankort" class="inline">
                                     <p id="m-b-2" class="inline">Visa/Dankort</p>
-                                    <!-- <span class="imgs inline"><img src="../img/logo-dankort.png"
-                                alt="dankort logo"></span> -->
+                                    <span class="imgs inline"><img id="dan_size" src="../img/logo-dankort_small.png"
+                                            alt="dankort logo"></span>
                                 </label>
                                 <div id="div1" class="hide">
                                     <label class="payment-label-around-div hidden" for="dankort-nr">
@@ -190,7 +200,7 @@
                                         <!--    <span class="close">x</span> -->
                                         <p id="mobile-pay-p">
                                             <input type="tel" name="card-nr" id="mobile-pay-nr" placeholder="+45"
-                                                pattern="[1-9][0-9]{7}" onclick="btnRadio(1), removeC(x)">
+                                                pattern="[1-9][0-9]{7}" onclick="btnRadio(1), removeC()">
                                         </p>
                                     </label></div>
                             </div>
@@ -220,8 +230,8 @@
                         </div>
 
                         <div class="block7">
+                            <div id="choose" class="hide">Vælg venligst en donation inden du trykker på send</div>
                             <div class="container-login-form-btn ">
-                                <div id="choose" class="hide">Vælg venligst en donation inden du trykker på send</div>
                                 <button id="btnSubmitDonation" class="btn btn-green" type="submit">Gennemfør Køb</button>
                             </div>
                             <button id="btnSubmitDonation" class="mobil-btn" type="submit">

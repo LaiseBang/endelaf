@@ -67,6 +67,18 @@
 .donation-padding {
   padding: 0; }
 
+/* ------------------ star on required fields --------*/
+span .required {
+  margin: -20px 0 0 -32px !important; }
+
+:required + .required::before {
+  color: red;
+  content: "*";
+  font-size: 2em; }
+
+.visible_hide {
+  visibility: hidden; }
+
 /*----------------------- Form Logo -----------------------*/
 .login-form-logo {
   font-size: 60px;
@@ -124,12 +136,15 @@
   color: #fff;
   background-color: #12bbf1; }
 
+#swip {
+  padding-top: 18px; }
+
 /*----------------------- Form input -----------------------*/
 .wrap-input {
   width: 100%;
   position: relative;
   border-bottom: 2px solid #ccc;
-  margin-bottom: 30px; }
+  margin-bottom: 15px; }
 
 .input {
   font-family: 'Raleway', sans-serif;
@@ -189,8 +204,7 @@ submit {
   border: none; }
 
 .inline {
-  display: inline-block;
-  margin-right: 2%; }
+  display: inline-block; }
 
 #m-b-2 {
   margin-bottom: 2px; }
@@ -232,13 +246,11 @@ input {
   width: 90%; }
 
 #dankort-nr {
-  background: url(../img/logo-dankort.png);
   background-size: 2.5rem 1.9rem;
   padding-right: 8px;
   margin-bottom: -8px; }
 
 .visa-nr {
-  background: url(../img/visa.png);
   background-size: 3.5rem 1.2rem;
   padding-right: 8px;
   margin-bottom: 30px; }
@@ -443,6 +455,12 @@ label {
   position: relative;
   top: 2px; }
 
+#dan_size {
+  max-width: 79px;
+  margin-left: 100%;
+  position: relative;
+  top: 4px; }
+
 #choose {
   background-color: #FF194E;
   color: white;
@@ -450,7 +468,8 @@ label {
   left: 7%;
   right: 7%;
   bottom: 3%;
-  padding: 15px; }
+  padding: 15px;
+  z-index: 100; }
 
 #totalPrice {
   color: #5C5656;
@@ -1096,38 +1115,3 @@ a {
   font-size: 0.8em;
   text-align: left;
   background: white; }
-
-/*----------------------- modal newpassword.html -----------------------*/
-.modal {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(1.1);
-  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; }
-
-.modal-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 1rem 1.5rem;
-  width: 24rem;
-  border-radius: 0.5rem; }
-
-.close-button {
-  float: right;
-  width: 1.5rem;
-  line-height: 1.5rem;
-  text-align: center;
-  cursor: pointer;
-  border-radius: 0.25rem;
-  background-color: #707070; }
-
-.close-button:hover {
-  background-color: #5C5656; }

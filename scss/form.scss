@@ -1,6 +1,6 @@
 $bluecolor: blue;
 $white:white;
-$green:#78BD6F;
+$green: #78BD6F;
 $darkblue:#446B7F;
 $lightblue:#12bbf1;
 $lightgrey:#5C5656;
@@ -8,6 +8,13 @@ $darkgrey:#707070;
 $ligthergrey:#ccc;
 $black:#000000;
 $red: #FF194E;
+$redgraph:#de4a5e;
+
+
+$mobilpaycolor: #5B79FF;
+$b2:#7ea6ba;
+$b3:#b2c9d6;
+
 /*----------------------- Background Image -----------------------*/
 
 .bg-img {
@@ -95,7 +102,24 @@ $red: #FF194E;
     padding: 0;
 }
 
+/* ------------------ star on required fields --------*/
+span .required {
+    margin: -20px 0 0 -32px !important;
+}
+//.required::before { content:" *"; }
+
+:required + .required::before {
+    color: red;
+    content: "*";
+    font-size: 2em;
+  }
+
+  .visible_hide {
+      visibility: hidden;
+  }
 /*----------------------- Form Logo -----------------------*/
+
+
 
 .login-form-logo {
     font-size: 60px;
@@ -167,15 +191,19 @@ $red: #FF194E;
 
 }
 
+#swip {
+    padding-top: 18px;
+}
 
 
 /*----------------------- Form input -----------------------*/
+
 
 .wrap-input {
     width: 100%;
     position: relative;
     border-bottom: 2px solid $ligthergrey;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .input {

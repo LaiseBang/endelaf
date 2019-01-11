@@ -11,7 +11,12 @@
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Niramit:300,400,500,600,700" rel="stylesheet">
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
     <title>En-del-af.dk</title>
+    <style>
 
+        span {
+            margin: -20px 0 0 -26px;
+        }
+    </style>
 </head>
 
 
@@ -34,52 +39,68 @@
         <div class="wrapper">
             <div class="container-login">
                 <div class="wrap-login">
-                    <form id="signup-form" class="login-form validate-form" action="donation.html" method="GET">
+                    <form id="signup-form" class="validate-form" action="donation.html" method="GET">
 
 
                         <div class="logo m-b-50"></div>
 
                         <h1 class="form-txt text-center">Opret en gratis konto</h1>
 
-                        <div class="wrap-input validate-input" data-validate="Enter fornavn">
-                            <input type="fornavn" id="txt_fornavn" class="input form-control" placeholder="Fornavn"
+                        <div class="wrap-input validate-input">
+                            <input type="fornavn" id="txt_fornavn" class="input required" placeholder="Fornavn" name="firstname"
                                 required>
+                            <span class="required"></span>
                             <span class="focus-input" data-placeholder="&#xf207;"></span>
                         </div>
 
                         <div class="wrap-input validate-input" data-validate="Enter efternavn">
                             <input type="Efternavn" id="txt_efternavn" class="input form-control" placeholder="Efternavn"
-                                required>
+                                name="lastname" required>
+                            <span class="required"></span>
                             <span class="focus-input" data-placeholder="&#xf191;"></span>
                         </div>
+
                         <div class="wrap-input validate-input" data-validate="Enter adresse">
                             <input type="adresse" id="txt_adresse" class="input form-control" placeholder="Adresse"
-                                required>
+                                name="adress" required>
+                            <span class="required"></span>
                             <span class="focus-input" data-placeholder="&#xf191;"></span>
                         </div>
+
                         <div class="wrap-input validate-input" data-validate="Enter postnr">
                             <input pattern="[0-9]{4}" type="postnr" id="txt_postnr" class="input form-control"
-                                placeholder="Postnr" required>
+                                placeholder="Postnr" name="zip_code" required>
+                            <span class="required"></span>
                             <span class="focus-input" data-placeholder="&#xf191;"></span>
                         </div>
+
                         <div class="wrap-input validate-input" data-validate="Enter by">
-                            <input type="by" id="txt_by" class="input form-control" placeholder="By" required>
+                            <input type="by" id="txt_by" class="input form-control" placeholder="By" name="city"
+                                required> </input>
+                            <span class="required"></span>
                             <span class="focus-input" data-placeholder="&#xf191;"></span>
                         </div>
+
                         <div class="wrap-input validate-input" data-validate="Enter email">
-                            <input type="email" id="email" class="input form-control" placeholder="Email" required>
-                            <span class="focus-input" data-placeholder="&#xf191;"></span>
-                        </div>
-                        <div class="wrap-input validate-input" data-validate="Enter passsword">
-                            <input type="password" id="password" class="input form-control" placeholder="Password"
+                            <input type="email" id="email" class="input form-control" placeholder="Email" name="email"
                                 required>
+                            <span class="required"></span>
                             <span class="focus-input" data-placeholder="&#xf191;"></span>
                         </div>
+
+                        <div class="wrap-input validate-input" data-validate="Enter passsword">
+                            <input type="password" id="password" class="input form-control" placeholder="Password" name="password"
+                                required>
+                            <span class="required"></span>
+                            <span class="focus-input" data-placeholder="&#xf191;"></span>
+                        </div>
+
                         <div class="wrap-input validate-input" data-validate="Enter telefon">
                             <input pattern="[0-9]{8}" type="telefon" id="txt_telefon" class="input form-control"
-                                placeholder="Telefon">
+                                placeholder="Telefon" name="phone_number">
                             <span class="focus-input" data-placeholder="&#xf191;"></span>
                         </div>
+
                         <div class="container-login-form-btn p-t-19">
                             <input type="submit" name="button" id="signup" class="login-form-btn" value="Opret bruger">
                         </div>

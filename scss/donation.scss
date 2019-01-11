@@ -1,16 +1,20 @@
 $bluecolor: blue;
-$mobilpaycolor: #5B79FF;
 $white:white;
-$green:#78BD6F;
+$green: #78BD6F;
 $darkblue:#446B7F;
-$b2:#7ea6ba;
-$b3:#b2c9d6;
 $lightblue:#12bbf1;
 $lightgrey:#5C5656;
 $darkgrey:#707070;
 $ligthergrey:#ccc;
 $black:#000000;
 $red: #FF194E;
+$redgraph:#de4a5e;
+
+
+$mobilpaycolor: #5B79FF;
+$b2:#7ea6ba;
+$b3:#b2c9d6;
+
 
 input[type=number] {
 
@@ -29,7 +33,7 @@ submit {
 
 .inline {
     display: inline-block;
-    margin-right: 2%;
+  //  margin-right: 2%;
 }
 
 #m-b-2 {
@@ -79,7 +83,7 @@ input {
 
 #dankort-nr {
     @extend %kvittering;
-    background: url(../img/logo-dankort.png);
+   // background: url(../img/logo-dankort.png);
     background-size: 2.5rem 1.9rem;
     padding-right: 8px;
     margin-bottom: -8px;
@@ -87,7 +91,7 @@ input {
 
 .visa-nr {
     @extend %kvittering;
-    background: url(../img/visa.png);
+    //background: url(../img/visa.png);
     background-size: 3.5rem 1.2rem;
     padding-right: 8px;
     margin-bottom: 30px;
@@ -350,7 +354,13 @@ label {
     position: relative;
     top: 2px;
 }
-
+#dan_size{
+   // width: 50%;
+    max-width: 79px;
+    margin-left: 100%;
+    position: relative;
+    top: 4px;
+}
 
 #choose {
     background-color: $red;
@@ -360,6 +370,7 @@ label {
     right: 7%;
     bottom: 3%;
     padding: 15px;
+    z-index: 100;
 }
 
 #totalPrice {
@@ -385,7 +396,7 @@ label {
 }
 
 #mobile-pay-confirm.not-active {
-    display: none
+    display: none;
 }
 
 #mobile-pay-confirm {

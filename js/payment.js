@@ -3,18 +3,21 @@
 function btnRadio(x) {
     if (x == 0) {
         document.getElementById("btnSubmitDonation").style.display = "block";
+        document.getElementById("mobile-pay-confirm").style.display = "none";
         document.getElementById("swip").style.display = "none";
     } else {
         document.getElementById("btnSubmitDonation").style.display = "none";
+        document.getElementById("mobile-pay-confirm").style.display = "block";
         document.getElementById("swip").style.display = "block";
         return;
     }
 }
 
-function removeC(x) {
-    let element = document.getElementById("mobile-pay-confirm");
-    element.classList.remove("not-active");
-}
+// function removeC() {
+//     let element = document.getElementById("mobile-pay-confirm");
+//     element.classList.remove("not-active");
+// }
+
 
 function show1() {
     document.getElementById('div1').style.display = 'block';

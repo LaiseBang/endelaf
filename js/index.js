@@ -4,6 +4,7 @@ let divs = ["Div1", "Div2", "Div3", "Div4"];
 let visibleDivId = null;
 
 function divVisibility(divId) {
+    console.log(visibleDivId, divId);
     if (visibleDivId === divId) {
         visibleDivId = null;
     } else {
@@ -20,6 +21,7 @@ function hideNonVisibleDivs() {
         div = document.getElementById(divId);
         if (visibleDivId === divId) {
             div.style.display = "block";
+            //  div.addClasslist()
         } else {
             div.style.display = "none";
         }
