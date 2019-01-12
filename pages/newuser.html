@@ -77,7 +77,7 @@
                         <div class="wrap-input validate-input" data-validate="Enter by">
                             <input type="by" id="txt_by" class="input form-control" placeholder="By" name="city"
                                 required> </input>
-                            <span class="required"></span>
+                            <span class="required required_by"></span>
                             <span class="focus-input" data-placeholder="&#xf191;"></span>
                         </div>
 
@@ -90,7 +90,7 @@
 
                         <div class="wrap-input validate-input" data-validate="Enter passsword">
                             <input type="password" id="password" class="input form-control" placeholder="Password" name="password"
-                                required>
+                                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
                             <span class="required"></span>
                             <span class="focus-input" data-placeholder="&#xf191;"></span>
                         </div>

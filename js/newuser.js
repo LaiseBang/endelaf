@@ -59,7 +59,6 @@ function saveUser(firstname_val, lastname_val, adress_val, postnr_val, by_val, e
 }
 
 // automatic fill in of city
-
 let zipCodeArray = [];
 // listen for entering of value
 zipCode.addEventListener('input', getCityByZip);
@@ -78,17 +77,11 @@ function getCityByZip() {
             function findMatch(objects, i) {
                 // find city in that object
                 if (Number(userInputNr) === objects.Postnr) {
-                    zipCode.className = "true";
+                    zipCode.className += "true";
                     // display city on screen
-                    city.textContent = zipCodeArray[i].Bynavn;
-                    console.log(city.textContent);
-
-
-
-                    city.setAttribute(zipCodeArray[i].Bynavn);
-                    document.body.appendChild(city);
-
-
+                    city.value = zipCodeArray[i].Bynavn;
+                    // remove asterisk on city
+                    document.querySelector(".required_by").style.visibility = "hidden";
                 }
             }
         }

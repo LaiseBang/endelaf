@@ -25,17 +25,23 @@ const attEY = document.createAttribute("required");
 const attC = document.createAttribute("required");
 const attMobilepay = document.createAttribute("required");
 
+// Eventlistener
+
+
+
 // show dankort / visa fields
 function show1() {
     document.getElementById('div1').style.display = 'block';
     document.getElementById('div2').style.display = 'none';
+
+
     // add required to Dankort/ Visa
     danNr.setAttributeNode(att);
     danExpMon.setAttributeNode(attEM);
     danExpYear.setAttributeNode(attEY);
     control.setAttributeNode(attC);
-    // remove required from mobilepay
-    mobPay.removeAttributeNode(attMobilepay);
+
+    removeRequired();
 }
 
 // show mobilpay 
@@ -44,10 +50,28 @@ function show2() {
     document.getElementById('div2').style.display = 'block';
     // add required to mobilepay
     mobPay.setAttributeNode(attMobilepay);
-    // remove required from Dankort / Visa
-    danNr.removeAttributeNode(att);
-    danExpMon.removeAttributeNode(attEM);
-    danExpYear.removeAttributeNode(attEY);
-    control.removeAttributeNode(attC);
+
+    removeRequired();
+}
+
+function removeRequired() {
+    if (document.getElementById("visa-dankort").checked) {
+        console.log("visa");
+        // remove required from mobilepay
+        mobPay.removeAttributeNode(attMobilepay);
+    } else if (document.getElementById('mobile-pay').checked) {
+        console.log("mobile");
+
+        // remove required from Dankort / Visa
+        danNr.removeAttributeNode(att);
+        danExpMon.removeAttributeNode(attEM);
+        danExpYear.removeAttributeNode(attEY);
+        control.removeAttributeNode(attC);
+
+    }
+
+
+    // if radiobutton checked==false and radiobutton mobil is checked == true then :
+
 
 }

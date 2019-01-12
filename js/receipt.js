@@ -3,20 +3,20 @@
 /////////////////////////// Display value and counts //////////////////////////////////////
 let input
 let count;
-let checkedValue;
 let x;
+let choiceCheck = false;
 
 function checkbox() {
-    console.log("valg");
+    //console.log("valg");
     input = document.querySelectorAll("input[type=checkbox]");
     count = document.querySelectorAll("[type='checkbox']:checked").length;
-    checkedValue = "";
+    //checkedValue = "";
     let result = [];
-    console.log(input);
+    //  console.log(input);
     for (let i = 0; i < input.length; i++) {
         if (input[i].checked) {
             result.push(input[i].value);
-            console.log("Pushed : " + input[i].value);
+            //  console.log("Pushed : " + input[i].value);
             x = input[i].value;
         }
     }
@@ -24,6 +24,8 @@ function checkbox() {
     let textnode = document.createTextNode(x);
     node.appendChild(textnode);
     document.getElementById("show").appendChild(node);
+
+    // the number of checkboxes that are checked
     document.getElementById("count").value = document.querySelectorAll("[type='checkbox']:checked").length;
 }
 
